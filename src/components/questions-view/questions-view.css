@@ -1,0 +1,98 @@
+.toolbar {
+    height: 100px;
+    background-color: darkgray;
+    border-bottom: 1px solid darkgray;
+}
+
+.question-label {
+    font-size: 16px;
+    height: 100px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.background-lightgray {
+    background: lightgray;
+}
+
+.question-button{
+    transition: all 0.3s linear;
+}
+.question-button:hover{
+    box-shadow:rgba(0,0,0,0.7) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.joker-button{
+    font-size: 18px;
+    border: none;
+    width: 120px;
+    height: 60px;
+    margin: auto;
+    transition: all 0.3s linear;
+
+    animation-name: blink;  
+    animation-iteration-count: infinite;  
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+
+  @keyframes blink {
+    0% {
+        background-color: rgb(25, 118, 210,1);
+    }
+    10% {
+        background-color: rgb(25, 118, 210,0.1);
+    }
+    20% {
+        background-color: rgb(25, 118, 210,1);
+    }
+    100% {
+        background-color: rgb(25, 118, 210,1);
+    }
+}
+
+.joker-button:disabled {
+    animation: none;
+    text-decoration: line-through;
+}
+
+.content-height{
+    height: calc(100% - 100px);
+}
+.content-height-smaller{
+    height: calc(100% - 290px);
+}
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  #cover-spin {
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+    display:block;
+}
+
+#cover-spin::after {
+    content:'';
+    position:absolute;
+    left:49%;top:46%;
+    width:40px;height:40px;
+    border-style:solid;
+    border-color:black;
+    border-top-color:transparent;
+    border-width: 5px;
+    border-radius:50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}

@@ -1,0 +1,48 @@
+.content-height{
+    height: calc(100% - 100px);
+}
+
+.random-button{
+    background: #f4511e !important;
+    border: none !important;
+    font-size: 20px;
+}
+
+.background-lightgray {
+  background: lightgray;
+}
+
+.animation {
+    animation: mymove 4s ease-in-out 1.5s forwards;
+    opacity: 0; 
+}
+
+@keyframes mymove {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.random-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .random-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .random-button:hover span {
+    padding-right: 25px;
+  }
+  
+  .random-button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

@@ -1,0 +1,14 @@
+.base-view-label{
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.img-height {
+    height: 400px;
+}
+
+.base-select {
+    width: 75%;
+    max-width: 310px;
+}

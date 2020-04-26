@@ -1,0 +1,19 @@
+.generic-button {
+    background-color: rgb(25,118,210);
+    width: 300px;
+    height: 60px;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    color: white;
+}
+
+.generic-button:hover{
+    background-color: rgb(17, 82, 147);
+    letter-spacing: 1px;
+}
+
+.generic-button:disabled{
+    opacity: 0.4;
+    pointer-events: none;
+}
