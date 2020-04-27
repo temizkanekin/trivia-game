@@ -109,9 +109,11 @@ const QuestionsView = ({ ...props }) => {
     setLoader(true);
     axios.post(requestUrl).then((res) => {
       // console.log(res.data.results);
-      setTimeout(timer(),500)
+      if(res.data.results.length > 0){
+        setTimeout(timer(),500)
+        setQuestions(res.data.results);
+      }
       setLoader(false);
-      setQuestions(res.data.results);
     });
   };
 
