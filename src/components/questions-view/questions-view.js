@@ -114,6 +114,11 @@ const QuestionsView = ({ ...props }) => {
         setQuestions(res.data.results);
       }
       setLoader(false);
+    })
+    .catch((err) => {
+      setQuestions([])
+      setLoader(false);
+      setIsJokerButtonDisabled(true)
     });
   };
 
@@ -240,7 +245,7 @@ const QuestionsView = ({ ...props }) => {
 
   const handleJokerButtonClick = () => {
     const questionsJokerApplied = shuffledQuestions.slice();
-    const correctAnswer = questions[currentQuestionNumber]["correct_answer"];
+    const correctAnswer = questions[currentQuestionNumber] && questions[currentQuestionNumber]["correct_answer"];
     const pickRandomWrongAnswer = questionsJokerApplied
       .filter((question) => question.value !== correctAnswer)
       .splice(
