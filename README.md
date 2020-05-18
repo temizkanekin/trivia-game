@@ -2,6 +2,8 @@
 
 ## Live version on Netlify
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dd577a39-0ada-4359-94e8-7d4ef0d27177/deploy-status)](https://app.netlify.com/sites/focused-haibt-db332c/deploys)
+
 https://focused-haibt-db332c.netlify.app/
 
 ## Available Scripts
